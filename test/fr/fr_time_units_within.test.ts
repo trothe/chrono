@@ -119,4 +119,11 @@ test("Test - Single Expression", function () {
 
         expect(result.start).toBeDate(new Date(2012, 7, 10, 12, 19));
     });
+
+    testSingleCase(chrono.fr, "régler une minuterie de 5 minutes", new Date(2012, 7, 10, 12, 14), (result) => {
+        expect(result.index).toBe(21);
+        expect(result.text).toBe("de 5 minutes");
+
+        expect(result.start).toBeDate(new Date(2012, 7, 10, 12, 19));
+    });
 });
